@@ -1,1 +1,8 @@
 @import '~bootstrap/scss/bootstrap';
+
+
+// Select the section with the id after sign-in
+#after-sign-in {
+  // Make it not display on the page to start off with
+  display: none;
+}

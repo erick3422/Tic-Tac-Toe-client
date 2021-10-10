@@ -13,5 +13,52 @@
     </head>
     <body>
       <h1>Browser Template</h1>
+
+<section id="before-sign-in">
+  <!-- Sign up form goes here-->
+  <form id="sign-up" class="border">
+    <fieldset>
+      <legend>Sign up</legend>
+      <input type="email" name="credentials[email]" placeholder="Email" required>
+      <input type="password" name="credentials[password]" placeholder="Password" required>
+      <input type="password" name="credentials[password_confirmation]" placeholder="Password Confirmation" required>
+      <button class="btn btn-secondary">Sign Up</button>
+    </fieldset>
+  </form>
+</section>
+
+
+<section id="middle-sign-in">
+  <!-- Sign in form goes here-->
+  <form id="sign-in" class="border">
+    <fieldset>
+      <legend>Sign in</legend>
+      <input type="email" name="credentials[email]" placeholder="Email" required>
+      <input type="password" name="credentials[password]" placeholder="Password" required>
+      <button class="btn btn-secondary">Sign in</button>
+    </fieldset>
+  </form>
+</section>
+
+<section id="after-sign-in">
+  <form id="sign-out" class="border">
+    <fieldset>
+      <legend>Sign-out</legend>
+      <input type="email" name="credentials[email]" placeholder="Email" required>
+      <input type="password" name="credentials[password]" placeholder="Password" required>
+      <button class="btn btn-secondary">Sign out </button>
+    </fieldset>
+  </form>
+</section>
+
+
+<!-- Create a section for our user feedback-->
+<section>
+  <div id="error-message"></div>
+  <div id="message-display"></div>
+</section>
+
+
+
     </body>
 </html>
