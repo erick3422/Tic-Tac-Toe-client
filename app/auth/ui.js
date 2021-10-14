@@ -51,6 +51,8 @@ const signInSuccess = function (responseData) {
   $('#middle-sign-in').hide()
   // After we sign in, show the section with the id `after-sign-in`
   $('#after-sign-in').show()
+  // After we sig in, show the section with the id `new-game`
+  $('#new-game').show()
 
   console.log('responseData is', responseData)
 }
@@ -87,6 +89,8 @@ const signOutSuccess = function () {
   $('#before-sign-in').show()
   // Also show the element with the id `middle-sign-in`
   $('#middle-sign-in').show()
+  // Also hide the element with the id `new-game`
+  $('#new-game').hide()
 
   console.log('signOutSuccess ran and nothing was returned!')
 }
