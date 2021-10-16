@@ -9,7 +9,6 @@ const OnCreateNewGame = function () {
   $('form').trigger('reset')
 }
 // A function to run anytime any error occurs
-
 const onError = function (err) {
   // if an error occurs, we will log the error (err)
   console.error(err)

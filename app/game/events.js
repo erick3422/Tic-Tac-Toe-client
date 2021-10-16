@@ -4,7 +4,8 @@ const api = require('./api')
 const ui = require('./ui')
 // Require function to get important data from our current forms
 const getFormFields = require('../../lib/get-form-fields')
-
+// Require for know who is the first to click
+let playerTurn = 'X'
 const onNewGame = (event) => {
   // Prevent the page to refresh itself
   event.preventDefault()
@@ -23,6 +24,15 @@ const onNewGame = (event) => {
     .catch(ui.onError)
 }
 
+const onSpace = (event) => {
+  console.log('click')
+  const box = $(event.target)
+  box.text(playerTurn)
+  playerTurn = playerTurn === 'O' ? 'X' : 'O'
+}
+
 module.exports = {
-  onNewGame
+  onNewGame,
+  onSpace
+
 }

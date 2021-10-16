@@ -14,4 +14,6 @@ $(() => {
   $('#sign-out').on('submit', ticEvents.onSignOut)
   // Display a new game
   $('#new-game').on('submit', gameEvents.onNewGame)
+  // Click Handler when space space is clicked in game board
+  $('.box').on('click', gameEvents.onSpace)
 })

@@ -8,9 +8,12 @@ console.log(store)
 const create = function (formData) {
   return $.ajax({
     method: 'POST',
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
     url: config.apiUrl + '/games',
     // So can start a new game
-    data: formData
+    data: { }
   })
 }
 
