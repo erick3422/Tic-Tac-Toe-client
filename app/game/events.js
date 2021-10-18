@@ -57,7 +57,7 @@ const checkWinner = (event) => {
       return true
     }
     if (winningSpaces[4] === playerTurn && winningSpaces[8] === playerTurn) {
-      event.target = `${playerTurn}} wins diagonally`
+      event.target = `${playerTurn} wins diagonally`
       return true
     }
   }
@@ -86,10 +86,32 @@ const checkWinner = (event) => {
     }
   }
 }
+const checkDraw = (event) => {
+  let draw = 0
+  winningSpaces.forEach((winningSpaces, i) => {
+    if (winningSpaces[i] !== null) draw++
+  })
+  if (draw === 9) {
+    event.target = 'Draw'
+  }
+}
 
+const restartGame = (event) => {
+  setTimeout(() => {
+    winningSpaces.forEach((space, i) => {
+      winningSpaces[i] = null
+    })
+    winningSpaces.forEach((box) => {
+      box.innerText = ''
+    })
+    event.target.innerText = 'Play'
+  }, 1000)
+}
 module.exports = {
   onNewGame,
   onSpace,
-  checkWinner
+  checkWinner,
+  checkDraw,
+  restartGame
 
 }
