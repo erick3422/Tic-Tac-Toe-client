@@ -17,5 +17,5 @@ $(() => {
   // Click Handler when space space is clicked in game board
   $('.box').on('click', gameEvents.onSpace)
   // Restart Game
-  $('.restart').on('click', gameEvents.RestartGame)
+  $('.button-49').on('click', gameEvents.RestartGame)
 })

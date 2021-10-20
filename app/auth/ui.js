@@ -4,7 +4,7 @@ console.log(store)
 
 const signUpSuccess = function (responseData) {
   // Tell the user it was successful
-  $('#message-display').text('Signed up successfully!')
+  $('#message-display').text('Signed successfully!')
 
   // Remove existing classes, then add a green text-success class from bootstrap
   $('#message-display').removeClass()
@@ -36,7 +36,7 @@ const signInSuccess = function (responseData) {
   console.log('store is', store)
 
   // tell the user it was successful
-  $('#message-display').text('Signed in successfully!')
+  $('#message-display').text('Welcome to Tic Tac Toe!')
 
   // remove existing classes, then add a green text-success class from bootstrap
   $('#message-display').removeClass()
@@ -63,17 +63,15 @@ const signInFailure = function (error) {
 
   // remove existing classes, then add a red text-danger class from bootstrap
   $('#error-message').removeClass()
-  $('#error-message').addClass('text-danger')
 
   // print the error
   console.error('error is', error)
 }
 
 const signOutSuccess = function () {
-  $('#movies-display').text('Signed out successfully')
+  $('#message-display').text('See you later!')
 
   $('#message-display').removeClass()
-  $('#message-display').addClass('text-success')
 
   $('form').trigger('reset')
 
@@ -91,6 +89,8 @@ const signOutSuccess = function () {
   $('#middle-sign-in').show()
   // Also hide the element with the id `new-game`
   $('#new-game').hide()
+  // Hide the Tic Tac Toe board
+  $('#game-board').hide()
 
   console.log('signOutSuccess ran and nothing was returned!')
 }
@@ -99,7 +99,6 @@ const signOutFailure = function (error) {
   $('#error-message').text('Error on sign out')
 
   $('#error-message').removeClass()
-  $('#error-message').addClass('text-danger')
 
   // clear (reset) the forms on the page
   $('form').trigger('reset')
