@@ -4,11 +4,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Permanent+Marker&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Rampart+One&display=swap');
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1024px) and (min-width: 400px)  {
+ #middle-sign-in h1 {
+   display:none;
 }
-
-
-
+}
 * {
   margin: 0;
   padding: 0;
