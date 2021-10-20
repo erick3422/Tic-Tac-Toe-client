@@ -4,7 +4,7 @@ console.log(store)
 
 const signUpSuccess = function (responseData) {
   // Tell the user it was successful
-  $('#message-display').text('Signed successfully!')
+  $('#message-display').text('Account Created! Please SIGN IN')
 
   // Remove existing classes, then add a green text-success class from bootstrap
   $('#message-display').removeClass()
