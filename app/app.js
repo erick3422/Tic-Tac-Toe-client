@@ -16,6 +16,6 @@ $(() => {
   $('#new-game').on('submit', gameEvents.onNewGame)
   // Click Handler when space space is clicked in game board
   $('.box').on('click', gameEvents.onSpace)
-  // Cheeking for the winner and say it
-  $('#AndWinnerIs').on('click', gameEvents.checkWinner)
+  // Restart Game
+  $('.restart').on('click', gameEvents.RestartGame)
 })

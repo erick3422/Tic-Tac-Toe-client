@@ -8,16 +8,9 @@ const getFormFields = require('../../lib/get-form-fields')
 
 // Variable for the Two different player, start with 'X'
 let playerTurn = 'X'
-const winningSpaces = [
-  [0, 1, 2],
-  [0, 3, 6],
-  [0, 4, 8],
-  [2, 5, 8],
-  [6, 7, 8],
-  [0, 4, 8],
-  [2, 4, 6],
-  [1, 4, 7],
-  [3, 4, 5]
+const movementCheck = [
+  '', '', '', '', '', '', '', '', ''
+
 ]
 
 // This Create a New game to Start
@@ -43,75 +36,73 @@ const onSpace = (event) => {
   console.log('click')
   const box = $(event.target)
   box.text(playerTurn)
+  movementCheck[event.target.id] = playerTurn
+  checkWinner()
   playerTurn = playerTurn === 'O' ? 'X' : 'O'
 }
 
-const checkWinner = (event) => {
-  if (winningSpaces[0] === playerTurn) {
-    if (winningSpaces[1] === playerTurn && winningSpaces[2] === playerTurn) {
-      event.target = `${playerTurn} wins up to top`
-      return true
-    }
-    if (winningSpaces[3] === playerTurn && winningSpaces[6] === playerTurn) {
-      event.target = `${playerTurn} wins on the left`
-      return true
-    }
-    if (winningSpaces[4] === playerTurn && winningSpaces[8] === playerTurn) {
-      event.target = `${playerTurn} wins diagonally`
-      return true
-    }
-  }
-  if (winningSpaces[8] === playerTurn) {
-    if (winningSpaces[2] === playerTurn && winningSpaces[5] === playerTurn) {
-      event.target = `${playerTurn} wins on the right`
-      return true
-    }
-    if (winningSpaces[6] === playerTurn && winningSpaces[7] === playerTurn) {
-      event.target = `${playerTurn} wins on the bottom`
-      return true
-    }
-  }
-  if (winningSpaces[4] === playerTurn) {
-    if (winningSpaces[1] === playerTurn && winningSpaces[7] === playerTurn) {
-      event.target = `${playerTurn} wins vertically on middle`
-      return true
-    }
-    if (winningSpaces[3] === playerTurn && winningSpaces[5] === playerTurn) {
-      event.target = `${playerTurn} wins horizontally on the middle`
-      return true
-    }
-    if (winningSpaces[2] === playerTurn && winningSpaces[6] === playerTurn) {
-      event.target = `${playerTurn} wins diagonally`
-      return true
-    }
+const checkWinner = () => {
+  if (movementCheck[0] === playerTurn && movementCheck[1] === playerTurn && movementCheck[2] === playerTurn) {
+    $('#AndWinnerIs').text(`${playerTurn} Wins up to top `)
+  } if (
+    movementCheck[0] === playerTurn && movementCheck[3] === playerTurn &&
+    movementCheck[6] === playerTurn
+  ) {
+    $('#AndWinnerIs').text(`${playerTurn} Wins on the left `)
+  } if (
+    movementCheck[0] === playerTurn && movementCheck[4] === playerTurn &&
+    movementCheck[8] === playerTurn
+  ) {
+    $('#AndWinnerIs').text(`${playerTurn} Wins diagonally `)
+  } if (
+    movementCheck[2] === playerTurn && movementCheck[5] === playerTurn &&
+    movementCheck[8] === playerTurn
+  ) {
+    $('#AndWinnerIs').text(`${playerTurn} Wins on the right `)
+  } if (
+    movementCheck[6] === playerTurn && movementCheck[7] === playerTurn &&
+    movementCheck[8] === playerTurn
+  ) {
+    $('#AndWinnerIs').text(`${playerTurn} Wins on the bottom `)
+  } if (
+    movementCheck[2] === playerTurn && movementCheck[4] === playerTurn &&
+    movementCheck[6] === playerTurn
+  ) {
+    $('#AndWinnerIs').text(`${playerTurn} Wins vertically on the middle `)
+  } if (
+    movementCheck[1] === playerTurn &&
+    movementCheck[4] === playerTurn &&
+    movementCheck[7] === playerTurn
+  ) {
+    $('#AndWinnerIs').text(`${playerTurn} Wins horizontally on the middle`)
+  } if (
+    movementCheck[3] === playerTurn && movementCheck[4] === playerTurn &&
+    movementCheck[5] === playerTurn
+  ) {
+    $('#AndWinnerIs').text(`${playerTurn} Wins diagonally `)
   }
 }
-const checkDraw = (event) => {
+const checkDraw = () => {
   let draw = 0
-  winningSpaces.forEach((winningSpaces, i) => {
-    if (winningSpaces[i] !== null) draw++
+  movementCheck.forEach((movementCheck, i) => {
+    if (movementCheck[i] !== null) draw++
   })
   if (draw === 9) {
-    event.target = 'Draw'
+    $('#AndWinnerIs').text("It's a draw")
   }
 }
 
-const restartGame = (event) => {
-  setTimeout(() => {
-    winningSpaces.forEach((space, i) => {
-      winningSpaces[i] = null
-    })
-    winningSpaces.forEach((box) => {
-      box.innerText = ''
-    })
-    event.target.innerText = 'Play'
-  }, 1000)
+const RestartGame = (event) => {
+  console.log('click')
+  $('.box').text('')
+  playerTurn = 'X'
+  movementCheck[event.target.id] = playerTurn
 }
 module.exports = {
   onNewGame,
   onSpace,
   checkWinner,
   checkDraw,
-  restartGame
+  RestartGame
 
 }

@@ -1,5 +1,271 @@
 @import '~bootstrap/scss/bootstrap';
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+#before-sign-in {
+  float:left;
+  width: 50px;
+  height: 80px;
+  margin: 100px;
+}
+
+#middle-sign-in {
+  float:left;
+  width: 50px;
+  height: 60px;
+  margin: 360px;
+}
+
+h1 {
+  text-align: center;
+}
+
+#before-sign-in .container  {
+  position: relative;
+  width: 800px;
+  height: 500px;
+  background: #fff;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+ #middle-sign-in .container  {
+  position: relative;
+  width: 800px;
+  height: 500px;
+  background: #fff;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+  #before-sign-in  .container .user {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+ #middle-sign-in .container .user {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+ #before-sign-in  .container .user .imgBx {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  background: #3a86ff;
+  transition: 0.5s;
+}
+
+ #middle-sign-in .container .user .imgBx {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  background: #3a86ff;
+  transition: 0.5s;
+}
+
+#before-sign-in   .container .user .imgBx img {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+ #middle-sign-in  .container .user .imgBx img {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+  #before-sign-in .container .user .formBx {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  transition: 0.5s;
+}
+
+ #middle-sign-in .container .user .formBx {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  transition: 0.5s;
+}
+
+#before-sign-in .container .user .formBx form legend {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+#middle-sign-in  .container .user .formBx form legend {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+  #before-sign-in  .container .user .formBx form input {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  background: #f5f5f5;
+  color: #333;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  font-size: 15px;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+ #middle-sign-in .container .user .formBx form input {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  background: #f5f5f5;
+  color: #333;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  font-size: 15px;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+  #before-sign-in  .container .user .formBx form .btn  {
+   max-width: 100px;
+  background: #0090e0;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: 0.5s;
+}
+
+ #middle-sign-in .container .user .formBx form .btn  {
+   max-width: 100px;
+  background: #0090e0;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: 0.5s;
+}
+
+#before-sign-in .container .user .formBx form .signup {
+  position: relative;
+  margin-top: 20px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #555;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+ #middle-sign-in .container .user .formBx form .signup {
+  position: relative;
+  margin-top: 20px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #555;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+
+ #before-sign-in  .container .user .formBx form .signup a {
+  font-weight: 600;
+  text-decoration: none;
+  color: #0090e0;
+}
+
+#middle-sign-in .container .user .formBx form .signup a {
+  font-weight: 600;
+  text-decoration: none;
+  color: #0090e0;
+}
+
+
+ #before-sign-in  .container .user .formBx form .signin {
+  position: relative;
+  margin-top: 20px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #555;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+ #middle-sign-in .container .user .formBx form .signin {
+  position: relative;
+  margin-top: 20px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #555;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+#before-sign-in   .container .user .formBx form .signin a {
+  font-weight: 600;
+  text-decoration: none;
+  color: #ffbe0b;
+}
+
+ #middle-sign-in  .container .user .formBx form .signin a {
+  font-weight: 600;
+  text-decoration: none;
+  color: #ffbe0b;
+}
+
+ #before-sign-in  .container .user .formBx form .btn2 {
+  background: #ffbe0b;
+}
+
+ #middle-sign-in .container .user .formBx form .btn2 {
+  background: #ffbe0b;
+}
 
 // Select the section with the id after sign-in
 #after-sign-in {
@@ -13,7 +279,9 @@
   text-align: center;
 }
 
-
+ #game-board  {
+  display: none;
+}
 
 .board-game {
   display: grid;
@@ -34,4 +302,9 @@
   cursor: pointer;
   text-align: center;
   font-size: 80px;
+}
+
+
+@media only screen and (max-width: 1024px) {
+
 }
