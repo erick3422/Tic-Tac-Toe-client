@@ -33,11 +33,11 @@ const onNewGame = (event) => {
 }
 
 const onSpace = (event) => {
-  console.log('click')
   const box = $(event.target)
   box.text(playerTurn)
   movementCheck[event.target.id] = playerTurn
   checkWinner()
+  checkDraw()
   playerTurn = playerTurn === 'O' ? 'X' : 'O'
 }
 
@@ -83,9 +83,9 @@ const checkWinner = () => {
   }
 }
 const checkDraw = () => {
-  let draw = 0
+  const draw = 0
   movementCheck.forEach((movementCheck, i) => {
-    if (movementCheck[i] !== null) draw++
+    if (movementCheck[i] !== checkWinner()) { $('#AndWinnerIs').text("It's a draw") }
   })
   if (draw === 9) {
     $('#AndWinnerIs').text("It's a draw")
