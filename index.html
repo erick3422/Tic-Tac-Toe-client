@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Tic Tac Toe</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>  <body>
+
+
+
+<section id="before-sign-in">
+<h1>Welcome </h1>
+  <div class="container">
+    <div class="user signupBx">
+      <div class="formBx">
+  <!-- Sign up form goes here-->
+  <form id="sign-up" >
+      <legend>Sign up</legend>
+      <input type="email" name="credentials[email]" placeholder="Email" required>
+      <input type="password" name="credentials[password]" placeholder="Password" required>
+      <input type="password" name="credentials[password_confirmation]" placeholder="Password Confirmation" required>
+      <button class="btn">Sign Up</button>
+  </form>
+  </div>
+  <div class="imgBx">
+    <img
+      src="./app/images/an x.jpeg"
+      alt="pic1">
+  </div>
+  </div>
+  </div>
+</section>
+
+
+<section id="middle-sign-in">
+  <h1>Back</h1>
+  <div class="container">
+    <div class="user signinBx">
+        <div class="imgBx">
+          <img
+            src="./app/images/circle.jpg"
+         alt="nature" >
+        </div>
+        <div class="formBx">
+  <!-- Sign in form goes here-->
+  <form id="sign-in">
+      <legend>Sign in</legend>
+      <input type="email" name="credentials[email]" placeholder="Email" required>
+      <input type="password" name="credentials[password]" placeholder="Password" required>
+      <button class="btn ">Sign in</button>
+  </form>
+  </div>
+  </div>
+  </div>
+</section>
+
+
+
+<section id="after-sign-in">
+  <form id="sign-out" class="border">
+    <fieldset>
+      <h1>Psss.... Ready to leave</h1>
+      <input type="email" name="credentials[email]" placeholder="Email" required>
+      <input type="password" name="credentials[password]" placeholder="Password" required>
+      <button class="button-29" role="button" >Sign out </button>
+    </fieldset>
+  </form>
+</section>
+<!-- Create a New Game to play -->
+<section id="display-game">
+  <form id="new-game">
+    <div class="text-center">
+  <button class="button-30" role="button" > New Game</button>
+  </div>
+  </form>
+</section>
+
+<!-- Game Board Display -->
+<section id="game-board" >
+  <h3>Tic Tac Toe</h3>
+<h3 id="AndWinnerIs"></h3>
+<div class="board-game">
+  <div class="box" id="0"></div>
+  <div class="box" id="1"></div>
+  <div class="box" id="2"></div>
+  <div class="box" id="3"></div>
+  <div class="box" id="4"></div>
+  <div class="box" id="5"></div>
+  <div class="box" id="6"></div>
+  <div class="box" id="7"></div>
+  <div class="box" id="8"></div>
+  </div>
+  <button class="button-49" role="button"> Restart</button>
+</section>
+
+
+<!-- Create a section for our user feedback-->
+<section>
+  <div id="error-message"></div>
+  <div id="message-display"></div>
+  <div id="winner-message"></div>
+</section>
+
+
+
+    </body>
+</html>
