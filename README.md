@@ -4,6 +4,11 @@
 
 A Game project with different goals in mind, the game purpose is let 2 player user play a Tic Tac Toe game with nice and  professional Sign Up and Sign in page, style game board with unique different button functions when you point to it with the mouse.
 
+
+## Link to the game 
+
+https://erick3422.github.io/Tic-Tac-Toe-client/
+
 ## Structure
 
 ### App
