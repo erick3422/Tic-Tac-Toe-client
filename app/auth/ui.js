@@ -11,7 +11,7 @@ const signUpSuccess = function (responseData) {
   $('#message-display').addClass('text-success')
 
   // Clear (reset) all of the forms
-  $('forms').trigger('reset')
+  $('form').trigger('reset')
 
   console.log('responseData is', responseData)
 }
